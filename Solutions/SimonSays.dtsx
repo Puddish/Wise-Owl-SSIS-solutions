@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{959B427D-2F43-40BF-A6F8-5EA46817AFD0}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{0CF7B7BB-9A23-45A7-BC0C-0F8879985CFD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2024,216 +2024,6 @@ where [refTable].[Series] = ?</property>
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task 3\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Flat File Destination"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task 3\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].Columns[Series]"
-                      cachedDataType="i4"
-                      cachedName="Series"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Series]"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Series]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].Columns[Winner]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Winner"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Winner]"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Winner]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].Columns[Start date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Start date"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Start date]"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Start date]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].Columns[Finish date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Finish date"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Finish date]"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Finish date]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Series]"
-                      dataType="r8"
-                      name="Series" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Winner]"
-                      dataType="wstr"
-                      length="255"
-                      name="Winner" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Start date]"
-                      dataType="dbTimeStamp"
-                      name="Start date" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Finish date]"
-                      dataType="dbTimeStamp"
-                      name="Finish date" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task 3\Flat File Destination 1"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Flat File Destination 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task 3\Flat File Destination 1.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Series]"
-                      cachedDataType="i4"
-                      cachedName="Series"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Series]"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Series]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Winner]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Winner"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Winner]"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Winner]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Start date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Start date"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Start date]"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Start date]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[Finish date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Finish date"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Finish date]"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Finish date]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Series]"
-                      dataType="i4"
-                      name="Series" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Winner]"
-                      dataType="wstr"
-                      length="255"
-                      name="Winner" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Start date]"
-                      dataType="dbTimeStamp"
-                      name="Start date" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[Finish date]"
-                      dataType="dbTimeStamp"
-                      name="Finish date" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
               refId="Package\Data Flow Task 3\GetEveryOther"
               componentClassID="Microsoft.RecordsetDestination"
               contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -2302,11 +2092,11 @@ where [refTable].[Series] = ?</property>
               </inputs>
             </component>
             <component
-              refId="Package\Data Flow Task 3\Lookup"
+              refId="Package\Data Flow Task 3\Lookup 2"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
+              name="Lookup 2"
               usesDispositions="true"
               version="6">
               <properties>
@@ -2319,7 +2109,7 @@ where [refTable].[Series] = ?</property>
 
 FROM     XFactor
 
-WHERE  (Series &lt;&gt;
+WHERE  (Series not in
  (SELECT MAX(Series) AS Expr1
                       		 FROM      XFactor AS XFactor_1))</property>
                 <property
@@ -2331,10 +2121,10 @@ WHERE  (Series &lt;&gt;
 
 FROM     XFactor
 
-WHERE  (Series &lt;&gt;
+WHERE  (Series not in
  (SELECT MAX(Series) AS Expr1
                       		 FROM      XFactor AS XFactor_1))) [refTable]
-where [refTable].[Winner] = ?</property>
+where [refTable].[Series] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2349,7 +2139,7 @@ where [refTable].[Winner] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -2370,7 +2160,7 @@ where [refTable].[Winner] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Winner]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Series]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2382,7 +2172,7 @@ where [refTable].[Winner] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task 3\Lookup.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task 3\Lookup 2.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-0PM5443\MSSQLSERVER01.AdventureWorksDW2019]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0PM5443\MSSQLSERVER01.AdventureWorksDW2019]"
                   description="Connection manager used to access lookup data."
@@ -2390,295 +2180,23 @@ where [refTable].[Winner] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input]"
+                  refId="Package\Data Flow Task 3\Lookup 2.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input].Columns[Winner]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Winner"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Winner]"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Winner</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Winner</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input].Columns[Series]"
+                      refId="Package\Data Flow Task 3\Lookup 2.Inputs[Lookup Input].Columns[Series]"
                       cachedDataType="i4"
                       cachedName="Series"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Series]"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn" />
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Series</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input].Columns[Start date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Start date"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Start date]"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn" />
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Start date</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input].Columns[Finish date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Finish date"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Finish date]"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn" />
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Finish date</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="RedirectRow"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 3\Lookup.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task 3\Lookup 1"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup 1"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT Series, Winner, [Start date], [Finish date]
-FROM     XFactor
-WHERE  (Series IN
-                      (SELECT MAX(Series) AS Expr1
-                       FROM      XFactor AS XFactor_1))</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT Series, Winner, [Start date], [Finish date]
-FROM     XFactor
-WHERE  (Series IN
-                      (SELECT MAX(Series) AS Expr1
-                       FROM      XFactor AS XFactor_1))) [refTable]
-where [refTable].[Series] = ? and [refTable].[Winner] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Series" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Winner" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Start date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Finish date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Series]};#{Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Winner]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task 3\Lookup 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-0PM5443\MSSQLSERVER01.AdventureWorksDW2019]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0PM5443\MSSQLSERVER01.AdventureWorksDW2019]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input].Columns[Series]"
-                      cachedDataType="i4"
-                      cachedName="Series"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Series]"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
+                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Series]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
                           name="JoinToReferenceColumn">Series</property>
                         <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Series</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input].Columns[Winner]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Winner"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Winner]"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Winner</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Winner</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input].Columns[Start date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Start date"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Start date]"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
                           dataType="System.Null"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn" />
-                        <property
-                          dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Start date</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input].Columns[Finish date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Finish date"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Finish date]"
-                      truncationRowDisposition="RedirectRow"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn" />
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Finish date</property>
+                          name="CopyFromReferenceColumn" />
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2687,80 +2205,41 @@ where [refTable].[Series] = ? and [refTable].[Winner] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Match Output]"
+                  refId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="RedirectRow"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task 3\Lookup 2.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup No Match Output]"
+                  refId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task 3\Lookup 2.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Error Output]"
+                  refId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task 3\Lookup 2.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task 3\Multicast"
-              componentClassID="Microsoft.Multicast"
-              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
-              name="Multicast">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 3\Multicast.Inputs[Multicast Input 1]"
-                  name="Multicast Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task 3\Multicast.Outputs[Multicast Output 2]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 2"
-                  synchronousInputId="Package\Data Flow Task 3\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 3\Multicast.Outputs[Multicast Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 1"
-                  synchronousInputId="Package\Data Flow Task 3\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 3\Multicast.Outputs[Multicast Output 3]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 3"
-                  synchronousInputId="Package\Data Flow Task 3\Multicast.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -2932,38 +2411,18 @@ FROM     XFactor</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task 3.Paths[Lookup Error Output]"
-              endId="Package\Data Flow Task 3\Flat File Destination.Inputs[Flat File Destination Input]"
-              name="Lookup Error Output"
-              startId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Error Output]" />
-            <path
-              refId="Package\Data Flow Task 3.Paths[Lookup Error Output1]"
-              endId="Package\Data Flow Task 3\Flat File Destination 1.Inputs[Flat File Destination Input]"
-              name="Lookup Error Output"
-              startId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Error Output]" />
-            <path
               refId="Package\Data Flow Task 3.Paths[Lookup Match Output]"
               endId="Package\Data Flow Task 3\GetEveryOther.Inputs[Recordset Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task 3\Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task 3.Paths[Lookup Match Output1]"
+              refId="Package\Data Flow Task 3.Paths[Lookup No Match Output]"
               endId="Package\Data Flow Task 3\GetLast.Inputs[Recordset Destination Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task 3\Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task 3.Paths[Multicast Output 1]"
-              endId="Package\Data Flow Task 3\Lookup 1.Inputs[Lookup Input]"
-              name="Multicast Output 1"
-              startId="Package\Data Flow Task 3\Multicast.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\Data Flow Task 3.Paths[Multicast Output 2]"
-              endId="Package\Data Flow Task 3\Lookup.Inputs[Lookup Input]"
-              name="Multicast Output 2"
-              startId="Package\Data Flow Task 3\Multicast.Outputs[Multicast Output 2]" />
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task 3\Lookup 2.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task 3.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task 3\Multicast.Inputs[Multicast Input 1]"
+              endId="Package\Data Flow Task 3\Lookup 2.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task 3\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -3011,6 +2470,7 @@ FROM     XFactor</property>
           DTS:refId="Package\Foreach Loop Container\Script Task 1"
           DTS:CreationName="Microsoft.ScriptTask"
           DTS:Description="Script Task"
+          DTS:Disabled="True"
           DTS:DTSID="{1be8c9cd-3089-4602-9a6b-482e35995cab}"
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
@@ -3230,34 +2690,14 @@ FROM     XFactor</property>
   </resheader>
 </root>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties.Settings.get_Default():ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties.Sett" +
-    "ings")]
-
-namespace ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -3397,6 +2837,35 @@ namespace ST_10e6a5d8e979429bb4fa0f99b0ca0c8d
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties.Settings.get_Default():ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties.Sett" +
+    "ings")]
+
+namespace ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -3426,15 +2895,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -3678,6 +3138,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               Language="CSharp"
               ReadOnlyVariables="User::Series,User::Winner">
               <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -3796,35 +3265,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties.Settings.get_Default():ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties.Sett" +
-    "ings")]
-
-namespace ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -4050,6 +3490,35 @@ namespace ST_10e6a5d8e979429bb4fa0f99b0ca0c8d
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties.Settings.get_Default():ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties.Sett" +
+    "ings")]
+
+namespace ST_10e6a5d8e979429bb4fa0f99b0ca0c8d.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -4079,15 +3548,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -4823,6 +4283,28 @@ FROM     XFactor</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="390.96665636831,282.533335248099">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71.066667562062"
+              Start="0,0"
+              End="0,63.566667562062">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.566667562062" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="388.733320485222,195.000001219114">
           <EdgeLayout.Curve>
@@ -4850,14 +4332,14 @@ FROM     XFactor</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,74.6666687605102"
+              EndConnector="0,74.6666687605109"
               Start="0,0"
-              End="0,67.1666687605102">
+              End="0,67.1666687605109">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.1666687605102" />
+                    End="0,67.1666687605109" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4880,28 +4362,6 @@ FROM     XFactor</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.3000008058548" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="390.966656368309,282.533335248099">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,71.0666675620624"
-              Start="0,0"
-              End="0,63.5666675620624">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,63.5666675620624" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5397,241 +4857,123 @@ FROM     XFactor</property>
     design-time-name="Package\Data Flow Task 3">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="119.2,41.6"
-          Id="Package\Data Flow Task 3\Multicast"
-          TopLeft="514.404761871649,156.476190469303" />
-        <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\Data Flow Task 3\GetLast"
-          TopLeft="703.690476157363,461.714285714286" />
-        <NodeLayout
-          Size="148,41.6"
-          Id="Package\Data Flow Task 3\GetEveryOther"
-          TopLeft="358.523809457582,576.447619020069" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow Task 3\Flat File Destination"
-          TopLeft="62.619047685275,353.638095389624" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,41.6"
           Id="Package\Data Flow Task 3\OLE DB Source"
-          TopLeft="500.714285714286,18.5714285714286" />
+          TopLeft="351.755958300025,178.904763178977" />
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Data Flow Task 3\Lookup"
-          TopLeft="382.857142857143,346.714285714286" />
+          Size="189.6,41.6"
+          Id="Package\Data Flow Task 3\GetLast"
+          TopLeft="233.898828158539,505.047619392002" />
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\Data Flow Task 3\GetEveryOther"
+          TopLeft="504.773803646129,509.714285156387" />
+        <AnnotationLayout
+          Text="Perche' la lookup error output non contine &#xA;IL massimo valore ? "
+          ParentId="Package\Data Flow Task 3"
+          FontInfo="{assembly:Null}"
+          Size="257.6,56"
+          Id="99a265f5-ad57-41e9-ae2f-3f0ca96cb2b3"
+          TopLeft="172.916659795576,554.06667043421" />
+        <NodeLayout
+          Size="120.8,41.6"
+          Id="Package\Data Flow Task 3\Lookup 2"
+          TopLeft="371.134244511709,329.766669287417" />
         <EdgeLayout
           Id="Package\Data Flow Task 3.Paths[Lookup Match Output]"
-          TopLeft="435.890476157363,388.314285714286">
+          TopLeft="450.334244511709,371.366669287417">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,188.133333305783"
+              EndConnector="128.43955913442,138.34761586897"
               Start="0,0"
-              End="0,180.633333305783">
+              End="128.43955913442,130.84761586897">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,180.633333305783" />
+                    End="0,52.4241256877368" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.4241256877368"
+                    Point2="0,56.4241256877368"
+                    Point3="4,56.4241256877368" />
+                  <mssgle:LineSegment
+                    End="124.43955913442,56.4241256877368" />
+                  <mssgle:CubicBezierSegment
+                    Point1="124.43955913442,56.4241256877368"
+                    Point2="128.43955913442,56.4241256877368"
+                    Point3="128.43955913442,60.4241256877368" />
+                  <mssgle:LineSegment
+                    End="128.43955913442,130.84761586897" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,84.5119791528914,96.3827734375,11.609375"
+              BoundingBox="7.15974050470988,61.4241256877368,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task 3.Paths[OLE DB Source Output]"
-          TopLeft="575.359523792967,60.1714285714286">
+          TopLeft="429.645101405867,220.504763178977">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,96.3047618978741"
+              EndConnector="0,109.26190610844"
               Start="0,0"
-              End="0,88.8047618978741">
+              End="0,101.76190610844">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88.8047618978741" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task 3.Paths[Multicast Output 2]"
-          TopLeft="574.004761871649,198.076190469303">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-134.747619014506,148.638095244983"
-              Start="0,0"
-              End="-134.747619014506,141.138095244983">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.3190476224917" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,70.3190476224917"
-                    Point2="0,74.3190476224917"
-                    Point3="-4,74.3190476224917" />
-                  <mssgle:LineSegment
-                    End="-130.747619014506,74.3190476224917" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-130.747619014506,74.3190476224917"
-                    Point2="-134.747619014506,74.3190476224917"
-                    Point3="-134.747619014506,78.3190476224917" />
-                  <mssgle:LineSegment
-                    End="-134.747619014506,141.138095244983" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="Perche' la lookup error output non contine &#xD;&#xA;IL massimo valore ? "
-          ParentId="Package\Data Flow Task 3"
-          FontInfo="{assembly:Null}"
-          Size="257.6,60"
-          Id="99a265f5-ad57-41e9-ae2f-3f0ca96cb2b3"
-          TopLeft="111.666662229432,389.600002479553" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 3.Paths[Lookup Error Output]"
-          TopLeft="382.857142857143,370.976190551955">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-149.838095171868,0"
-              Start="0,0"
-              End="-142.338095171868,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-142.338095171868,0" />
+                    End="0,101.76190610844" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-117.035434304684,5,91.7327734375,11.609375"
+              BoundingBox="-8,42.8809530542199,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="120.8,41.6"
-          Id="Package\Data Flow Task 3\Lookup 1"
-          TopLeft="719.999971389772,326.00000070254" />
         <EdgeLayout
-          Id="Package\Data Flow Task 3.Paths[Multicast Output 1]"
-          TopLeft="592.538095204982,198.076190469303">
+          Id="Package\Data Flow Task 3.Paths[Lookup No Match Output]"
+          TopLeft="412.734244511709,371.366669287417">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="187.86187618479,127.923810233237"
+              EndConnector="-84.0354163531701,133.680950104585"
               Start="0,0"
-              End="187.86187618479,120.423810233237">
+              End="-84.0354163531701,126.180950104585">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.1861371547512" />
+                    End="0,50.52085808187" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,48.1861371547512"
-                    Point2="0,52.1861371547512"
-                    Point3="4,52.1861371547512" />
+                    Point1="0,50.52085808187"
+                    Point2="0,54.52085808187"
+                    Point3="-4,54.52085808187" />
                   <mssgle:LineSegment
-                    End="183.86187618479,52.1861371547512" />
+                    End="-80.0354163531701,54.52085808187" />
                   <mssgle:CubicBezierSegment
-                    Point1="183.86187618479,52.1861371547512"
-                    Point2="187.86187618479,52.1861371547512"
-                    Point3="187.86187618479,56.1861371547512" />
+                    Point1="-80.0354163531701,54.52085808187"
+                    Point2="-84.0354163531701,54.52085808187"
+                    Point3="-84.0354163531701,58.52085808187" />
                   <mssgle:LineSegment
-                    End="187.86187618479,120.423810233237" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task 3.Paths[Lookup Match Output1]"
-          TopLeft="780.399971389772,367.60000070254">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="18.0905047675907,94.1142850117458"
-              Start="0,0"
-              End="18.0905047675907,86.6142850117458">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.0571425058729" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.0571425058729"
-                    Point2="0,47.0571425058729"
-                    Point3="4,47.0571425058729" />
-                  <mssgle:LineSegment
-                    End="14.0905047675907,47.0571425058729" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.0905047675907,47.0571425058729"
-                    Point2="18.0905047675907,47.0571425058729"
-                    Point3="18.0905047675907,51.0571425058729" />
-                  <mssgle:LineSegment
-                    End="18.0905047675907,86.6142850117458" />
+                    End="-84.0354163531701,126.180950104585" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-39.1461343349547,52.0571425058729,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task 3\Flat File Destination 1"
-          TopLeft="962.499961753688,328.133333925671" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 3.Paths[Lookup Error Output1]"
-          TopLeft="840.799971389772,347.866667314106">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="121.699990363916,0"
-              Start="0,0"
-              End="114.199990363916,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="114.199990363916,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="11.233608463208,5,91.7327734375,11.609375"
+              BoundingBox="-106.692747239085,59.52085808187,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5641,29 +4983,6 @@ FROM     XFactor</property>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 3\OLE DB Source">
     <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 3\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -5764,7 +5083,7 @@ FROM     XFactor</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 3\Lookup 1">
+    design-time-name="Package\Data Flow Task 3\Lookup 2">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
